@@ -11,4 +11,14 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
+$defaults = array(
+    'height'               => 500,
+    'width'                => 1000,
+    'flex-height'          => true,
+    'flex-width'           => true,
+    'header-text'          => array( 'site-title', 'site-description' ),
+    'unlink-homepage-logo' => true, 
+);
+
+add_theme_support( 'custom-logo', $defaults );
 ?>
