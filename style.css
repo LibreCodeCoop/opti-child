@@ -11,3 +11,62 @@
  Text Domain:  opti-child
 */
 
+#body {
+	font-family: sans-serif !important;
+}
+
+#lead-story {
+	background:#cce7d4
+}
+
+#recent-posts .sticky {
+    background: #cce7d4;
+}
+
+#nav-primary {
+    background: #4d5a62 !important;
+    padding: 5px;
+}
+
+#nav-primary .current-menu-item > a, #nav-primary .current-cat > a {
+    color: white;
+}
+
+aside h3.widgettitle {
+    background: #cce7d4;
+}
+
+footer {
+    background: #ffffff !important;
+}
+
+footer .col {
+    width:33%;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer .col img{
+    width:25%;
+}
+
+#footer-wrap {
+    border-top: 3px solid #f48634 !important;
+}
+
+#recent-posts h3 {
+    border-bottom: 4px solid #f48634;
+}
+
+#featured-cats h3, #recent-posts h3 {
+    border-bottom: 4px solid #f48634;
+}
+
+#masthead .custom-logo-link{
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+#masthead{
+    text-align: unset;
+}
