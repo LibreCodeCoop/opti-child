@@ -39,13 +39,13 @@
 						<?php } ?>
 					</hgroup>
 <?php
-	get_template_part( 'searchform' );
 	opti_custom_header( 'header' );
 ?>
 				</section>
 				<nav class="menu" id="nav-primary">
 					<section class="row clearfloat">
 						<?php opti_navmenu( 'navigation_top' ); ?>
+						<?php get_template_part( 'searchform' ); ?>
 					</section>
 				</nav>
 <?php
