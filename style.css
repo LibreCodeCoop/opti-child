@@ -10,6 +10,11 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  opti-child
 */
+:root {
+    --orange: #f48634;
+    --white: #ffffff;
+    --current: #37464d;
+}
 
 #body {
 	font-family: sans-serif !important;
@@ -25,19 +30,59 @@
 
 #nav-primary {
     background: #4d5a62 !important;
+    min-height: unset;
+}
+
+#nav-primary a {
+    border-left: 1px solid var(--white);
+    padding: 0px 16px;
+}
+
+#nav-primary .home a{
+    padding: unset;
+    border-left: unset;
+}
+
+.home{
+    padding: 0px !important;
+}
+
+#nav-primary .home span.genericon-home{
+    font-size: 34px;
     padding: 5px;
 }
 
-#nav-primary .current-menu-item > a, #nav-primary .current-cat > a {
-    color: white;
+#nav-primary li{
+    border-right-color: unset;
+    border-left-color: unset;
+    border-right: unset;
+    border-left: unset;
+    padding: 15px 0px;
 }
+
+.nav a{
+    padding: unset;
+}
+
+#nav-primary .current-menu-item > a, #nav-primary .current-cat > a{
+    border-top: unset;
+    margin-top: unset;
+    border-color: var(--white) !important;
+    color: var(--orange) !important;
+}
+
+#nav-primary .current-menu-item{
+    border-top: 3px solid var(--orange);
+    background-color: var(--current) !important;
+}
+
 
 aside h3.widgettitle {
     background: #cce7d4;
 }
 
 footer {
-    background: #ffffff !important;
+    background: var(--white) !important;
 }
 
 footer .col {
@@ -51,15 +96,11 @@ footer .col img{
 }
 
 #footer-wrap {
-    border-top: 3px solid #f48634 !important;
-}
-
-#recent-posts h3 {
-    border-bottom: 4px solid #f48634;
+    border-top: 3px solid var(--orange) !important;
 }
 
 #featured-cats h3, #recent-posts h3 {
-    border-bottom: 4px solid #f48634;
+    border-bottom: 4px solid var(--orange);
 }
 
 #masthead .custom-logo-link{
@@ -69,4 +110,25 @@ footer .col img{
 
 #masthead{
     text-align: unset;
+}
+
+#masthead form.searchform{
+    margin-top: 5px;
+}
+
+#masthead input.searchfield{
+    border: unset;
+    background: var(--white) !important;
+}
+
+input.searchfield{
+    border-radius: unset;
+}
+
+#language{
+    float: right;
+}
+
+#language li{
+    display: inline;
 }
