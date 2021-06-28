@@ -123,12 +123,18 @@ footer .col img{
 
 input.searchfield{
     border-radius: unset;
+    width: 150px;
 }
 
-#language{
-    float: right;
+.wpglobus-current-language{
+    color: var(--orange) !important;
 }
 
-#language li{
-    display: inline;
+.wpglobus-selector-box img{
+    display: none;
+}
+
+.wpglobus-selector-box{
+    padding: 20px !important;
+    float: right !important;
 }

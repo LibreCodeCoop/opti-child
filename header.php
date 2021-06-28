@@ -28,6 +28,10 @@
 
 				<section class="row">
 				<?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
+				<div class="wpglobus-selector-box">
+					<?php if ( function_exists( 'wp_globus' ) ) { wp_globus(); } ?>
+				</div>
+
 					<hgroup id="branding">
 						<h1 id="logo" class="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Home', 'opti' ); ?>"><?php bloginfo( 'name' ); ?></a>
@@ -42,6 +46,7 @@
 	opti_custom_header( 'header' );
 ?>
 				</section>
+
 				<nav class="menu" id="nav-primary">
 					<section class="row clearfloat">
 						<?php opti_navmenu( 'navigation_top' ); ?>
