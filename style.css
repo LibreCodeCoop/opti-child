@@ -24,6 +24,14 @@ nav, .postmetadata, .wp-caption{
 	font-family: "Open Sans", sans-serif;
 }
 
+p{
+    color: #606363;
+}
+
+h3{
+    font-size: 22px !important;
+}
+
 #lead-story,
 #recent-posts .sticky,
 aside h3.widgettitle {
@@ -122,8 +130,10 @@ footer .col img{
     border-top: 3px solid var(--second) !important;
 }
 
-#featured-cats h3, #recent-posts h3 {
+#recent-posts h3 {
     border-bottom: 4px solid var(--second);
+    text-transform: uppercase;
+    padding-bottom: 10px;
 }
 
 #masthead .custom-logo-link{
@@ -195,4 +205,14 @@ aside .widget li .date{
 
 aside .widget li a{
     font-size: 14px;
+}
+
+.postmetadata .byline,
+.postmetadata .author,
+.postmetadata em{
+    display: none;
+}
+
+aside h3.widgettitle{
+    padding: 4px 8px;
 }

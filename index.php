@@ -8,6 +8,7 @@
 get_header();
 
 $display_categories = opti_get_homepage_categories();
+
 $showposts = (int) opti_option( 'featured-posts' );
 
 $recent_colwidth = 'ninecol';
@@ -20,7 +21,6 @@ if ( empty( $display_categories ) ) {
 		<?php
 		$paged = get_query_var( 'paged' ) ? (int) get_query_var( 'paged' ) : 1;
 		$page_title = esc_html__( 'Recent Posts', 'opti' );
-		$ignore_post = -1;
 
 		if ( 1 === $paged ) {
 			get_template_part( 'includes/featured' );
@@ -28,21 +28,35 @@ if ( empty( $display_categories ) ) {
 			$page_title = sprintf( __( 'Recent Posts - page %d', 'opti' ), $paged );
 		}
 
-		if ( have_posts() ) {?>
-		<div id="recent-posts" class="<?php echo esc_attr( $recent_colwidth ); ?>">
-			<h3><?php echo esc_html( $page_title ); ?></h3>
-			<ul id="recent-excerpts">
-				<?php
-				while ( have_posts() ) {
-					the_post();
-					if ( $post->ID !== $ignore_post ) {
-						get_template_part( 'content', 'home-loop' );
-					}
-				}?>
-			</ul>
-			<?php get_template_part( 'includes/pagination' );?>
-		</div><!--END RECENT/OLDER POSTS-->
-		<?php
+		$display_apidemiologia_em_foco = array(0 => "134"); // Categoria Epidemiologia em foco
+		$exclude = array();
+		foreach ( (array) $display_apidemiologia_em_foco as $category ) {
+			$cat_query = new WP_Query(
+				array(
+					'posts_per_page' => $showposts,
+					'cat' => (int) $category,
+					'post__not_in' => $exclude,
+				)
+			);?>
+			<div id="recent-posts" class="<?php echo esc_attr( $recent_colwidth ); ?>">
+				<h3>
+					<a class="dark" href="<?php echo esc_url( get_category_link( $category ) ); ?>"><?php printf( esc_html__( '%s', 'opti' ), get_cat_name( $category ) ); ?></a>
+				</h3>
+				<ul id="recent-excerpts">
+
+					<?php
+					if ( $cat_query->have_posts() ) {?>
+						<ul>
+							<?php
+							while ( $cat_query->have_posts() ) {
+								$cat_query->the_post();
+								$exclude[] = $cat_query->post->ID;
+								get_template_part( 'content', 'home-loop' );
+							}
+					}?>
+					</ul>
+				</div>
+			<?php get_template_part( 'includes/pagination' );
 		}
 
 		if ( $display_categories && is_array( $display_categories ) ) {?>
