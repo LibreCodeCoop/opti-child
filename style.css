@@ -16,6 +16,7 @@
     --third: #cce7d4;
     --white: #ffffff;
     --current: #37464d;
+    --link: #237992;
 }
 
 #body,
@@ -159,4 +160,39 @@ input.searchfield{
 .wpglobus-selector-box{
     padding: 20px !important;
     float: right !important;
+}
+
+.eightcol .fourcol{
+    float: left !important;
+}
+
+a.dark,
+a.dark:visited,
+aside .widget li a,
+aside .widget li a:visited,
+aside h3.widgettitle{
+    color: var(--link);
+    font-weight: bold;
+}
+
+.widgettitle{
+    text-transform: uppercase;
+}
+
+aside .widget{
+    background: unset;
+}
+
+aside .widget-wrap{
+    border: unset;
+    border-top: 3px solid #CCC;
+}
+
+aside .widget li .date{
+    font-size: 10px;
+    color: var(--link);
+}
+
+aside .widget li a{
+    font-size: 14px;
 }
