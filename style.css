@@ -17,6 +17,7 @@
     --white: #ffffff;
     --current: #37464d;
     --link: #237992;
+    --font-color: #606363;
 }
 
 #body,
@@ -24,8 +25,9 @@ nav, .postmetadata, .wp-caption{
 	font-family: "Open Sans", sans-serif;
 }
 
-p{
-    color: #606363;
+p,
+#category-posts-2-internal a{
+    color: var(--font-color);
 }
 
 h3{
@@ -130,7 +132,8 @@ footer .col img{
     border-top: 3px solid var(--second) !important;
 }
 
-#recent-posts h3 {
+#recent-posts h3,
+#category-posts-2 h3 {
     border-bottom: 4px solid var(--second);
     text-transform: uppercase;
     padding-bottom: 10px;
@@ -215,4 +218,12 @@ aside .widget li a{
 
 aside h3.widgettitle{
     padding: 4px 8px;
+}
+
+#category-posts-2 h3.widgettitle{
+    background: unset;
+}
+
+#category-posts-2 .widget-wrap{
+    border-top: 0px;
 }
