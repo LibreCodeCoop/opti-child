@@ -56,7 +56,7 @@ if ( empty( $display_categories ) ) {
 					}?>
 					</ul>
 				</div>
-			<?php get_template_part( 'includes/pagination' );
+		<?php
 		}
 
 		if ( $display_categories && is_array( $display_categories ) ) {?>
