@@ -50,3 +50,59 @@ function wp_globus() {
 
 	endforeach;
 }
+
+/**
+ * Initialize Sidebars
+ */
+function opti_child_widgets_init() {
+
+    remove_action( 'widgets_init',  'opti_widgets_init');
+	register_sidebar(
+		array(
+			'name' => esc_html__( 'Sidebar Widgets', 'opti-child' ),
+			'id' => 'sidebar-1',
+			'description' => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
+			'after_widget' => '</div></section>',
+			'before_title' => '<h3 class="widgettitle">',
+			'after_title' => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__( 'Left Footer Widgets', 'opti-child' ),
+			'id' => 'sidebar-2',
+			'description' => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
+			'after_widget' => '</div></section>',
+			'before_title' => '<h4 class="widgettitle">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__( 'Middle Footer Widgets', 'opti-child' ),
+			'id' => 'sidebar-3',
+			'description' => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
+			'after_widget' => '</div></section>',
+			'before_title' => '<h4 class="widgettitle">',
+			'after_title' => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__( 'Right Footer Widgets', 'opti-child' ),
+			'id' => 'sidebar-4',
+			'description' => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
+			'after_widget' => '</div></section>',
+			'before_title' => '<h4 class="widgettitle">',
+			'after_title' => '</h4>',
+		)
+	);
+}
+add_action( 'widgets_init', 'opti_child_widgets_init',0 );
