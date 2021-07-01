@@ -25,11 +25,6 @@ nav, .postmetadata, .wp-caption{
 	font-family: "Open Sans", sans-serif;
 }
 
-p,
-#category-posts-2-internal a{
-    color: var(--font-color);
-}
-
 h3{
     font-size: 22px !important;
 }
@@ -119,13 +114,13 @@ footer {
 }
 
 footer .col {
-    width:33%;
-    text-align: center;
-    font-weight: bold;
+    width: 33.3%;
+    text-align: center !important;
+    font-weight: bold !important;
 }
 
 footer .col img{
-    width:25%;
+    width:80px
 }
 
 #footer-wrap {
@@ -181,11 +176,13 @@ input.searchfield{
 
 a.dark,
 a.dark:visited,
-aside .widget li a,
-aside .widget li a:visited,
-aside h3.widgettitle{
-    color: var(--link);
-    font-weight: bold;
+aside .widget a,
+aside .widget a:visited,
+aside h3,
+section h3,
+section .widget-wrap a{
+    color: var(--link) !important;
+    font-weight: bold !important;
 }
 
 .widgettitle{
@@ -201,9 +198,16 @@ aside .widget-wrap{
     border-top: 3px solid #CCC;
 }
 
-aside .widget li .date{
-    font-size: 10px;
+aside .widget li .date,
+.widget-wrap .post-date,
+#featured-cats .date{
+    font-size: 11px;
     color: var(--link);
+    margin: 0px !important;
+}
+
+aside .widget li{
+    line-height:initial !important;
 }
 
 aside .widget li a{
@@ -226,4 +230,25 @@ aside h3.widgettitle{
 
 #category-posts-2 .widget-wrap{
     border-top: 0px;
+}
+
+p,
+#category-posts-2-internal a{
+    color: var(--font-color) !important;
+}
+
+#featured-cats h3{
+    border-bottom: unset;
+}
+
+@media only screen and (max-width: 768px) {
+    footer .col,
+    .row #recent-posts.sevencol {
+        width: auto;
+        float: none;
+        margin: 0;
+    }
+    #masthead .custom-logo-link{
+        width: 100%;
+    }
 }
