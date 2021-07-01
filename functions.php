@@ -103,6 +103,17 @@ function opti_child_widgets_init() {
 			'before_title' => '<h4 class="widgettitle">',
 			'after_title' => '</h4>',
 		)
+    );
+	register_sidebar(
+		array(
+			'name' => esc_html__( 'Central Widgets', 'opti-child' ),
+			'id' => 'sidebar-5',
+			'description' => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
+			'after_widget' => '</div></section>',
+			'before_title' => '<h4 class="widgettitle">',
+			'after_title' => '</h4>',
+		)
 	);
 }
 add_action( 'widgets_init', 'opti_child_widgets_init',0 );

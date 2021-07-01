@@ -26,41 +26,17 @@ if ( empty( $display_categories ) ) {
 			get_template_part( 'includes/featured' );
 		} else {
 			$page_title = sprintf( __( 'Recent Posts - page %d', 'opti' ), $paged );
-		}
+		}?>
+		<div id="recent-posts" class="<?php echo esc_attr( $recent_colwidth ); ?>">
+			<?php
+			if ( is_active_sidebar( 'sidebar-5' ) ) {
+				dynamic_sidebar( 'sidebar-5' );
+			}?>
+		</div>
 
-		$display_apidemiologia_em_foco = array(0 => "134"); // Categoria Epidemiologia em foco
-		$exclude = array();
-		foreach ( (array) $display_apidemiologia_em_foco as $category ) {
-			$cat_query = new WP_Query(
-				array(
-					'posts_per_page' => $showposts,
-					'cat' => (int) $category,
-					'post__not_in' => $exclude,
-				)
-			);?>
-			<div id="recent-posts" class="<?php echo esc_attr( $recent_colwidth ); ?>">
-				<h3>
-					<a class="dark" href="<?php echo esc_url( get_category_link( $category ) ); ?>"><?php printf( esc_html__( '%s', 'opti' ), get_cat_name( $category ) ); ?></a>
-				</h3>
-				<ul id="recent-excerpts">
-
-					<?php
-					if ( $cat_query->have_posts() ) {?>
-						<ul>
-							<?php
-							while ( $cat_query->have_posts() ) {
-								$cat_query->the_post();
-								$exclude[] = $cat_query->post->ID;
-								get_template_part( 'content', 'home-loop' );
-							}
-					}?>
-					</ul>
-				</div>
 		<?php
-		}
-
 		if ( $display_categories && is_array( $display_categories ) ) {?>
-			<aside class="fourcol last">
+			<aside id="featured-cats" class="threecol">
 					<?php
 					$exclude = array();
 					foreach ( (array) $display_categories as $category ) {
