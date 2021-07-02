@@ -241,6 +241,14 @@ p,
     border-bottom: unset;
 }
 
+#category-posts-3 ul li{
+    padding: 10px !important;
+}
+
+#category-posts-3 ul li:first-child{
+    background: var(--third);
+}
+
 @media only screen and (max-width: 768px) {
     footer .col,
     .row #recent-posts.sevencol {
