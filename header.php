@@ -24,27 +24,24 @@
 
 		<section class="container hfeed">
 			<header id="masthead" role="banner">
-			<?php do_action( 'before' ); ?>
+				<?php do_action( 'before' ); ?>
 
 				<section class="row">
-				<?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
-				<div class="wpglobus-selector-box">
-					<?php if ( function_exists( 'wp_globus' ) ) { wp_globus(); } ?>
-				</div>
-
-					<hgroup id="branding">
-						<h1 id="logo" class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Home', 'opti' ); ?>"><?php bloginfo( 'name' ); ?></a>
-						</h1>
-						<?php if ( get_bloginfo( 'description' ) ) { ?>
-						<h2 id="description" class="site-description">
-							<?php bloginfo( 'description' ); ?>
-						</h2>
-						<?php } ?>
-					</hgroup>
-<?php
-	opti_custom_header( 'header' );
-?>
+					<?php the_custom_logo(); ?>
+					<div class="wpglobus-selector-box">
+						<?php wp_globus(); ?>
+					</div>
+						<hgroup id="branding">
+							<h1 id="logo" class="site-title">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Home', 'opti' ); ?>"><?php bloginfo( 'name' ); ?></a>
+							</h1>
+							<?php if ( get_bloginfo( 'description' ) ) { ?>
+							<h2 id="description" class="site-description">
+								<?php bloginfo( 'description' ); ?>
+							</h2>
+							<?php } ?>
+						</hgroup>
+					<?php opti_custom_header( 'header' );?>
 				</section>
 
 				<nav class="menu" id="nav-primary">
@@ -53,26 +50,19 @@
 						<?php get_template_part( 'searchform' ); ?>
 					</section>
 				</nav>
-<?php
-	if ( has_nav_menu( 'navigation_bottom' ) ) {
-?>
-				<nav class="menu clearfloat" id="nav-lower">
-					<section class="row clearfloat">
-						<?php wp_nav_menu( array( 'theme_location' => 'navigation_bottom', 'menu_class' => 'nav' ) ); ?>
-					</section>
-				</nav>
-<?php
-	}
-?>
+
+				<?php if ( has_nav_menu( 'navigation_bottom' ) ) {?>
+					<nav class="menu clearfloat" id="nav-lower">
+						<section class="row clearfloat">
+							<?php wp_nav_menu( array( 'theme_location' => 'navigation_bottom', 'menu_class' => 'nav' ) ); ?>
+						</section>
+					</nav>
+				<?php }?>
 			</header>
 
 			<?php do_action( 'before' ); ?>
 
 			<section class="wrapper">
-
 				<section id="main">
-<?php
-
-	opti_custom_header();
-
-	do_action( 'opti_after_header' );
+					<?php opti_custom_header();
+					do_action( 'opti_after_header' );
