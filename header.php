@@ -23,6 +23,7 @@
 		<?php wp_body_open(); ?>
 
 		<section class="container hfeed">
+			<?php get_template_part('header-governo-federal'); ?>
 			<?php get_template_part('header-fiocruz'); ?>
 
 			<header id="masthead" role="banner">
