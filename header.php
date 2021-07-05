@@ -23,9 +23,10 @@
 		<?php wp_body_open(); ?>
 
 		<section class="container hfeed">
+			<?php get_template_part('header-fiocruz'); ?>
+
 			<header id="masthead" role="banner">
 				<?php do_action( 'before' ); ?>
-
 				<section class="row">
 					<div class="eightcol">
 						<?php the_custom_logo(); ?>
