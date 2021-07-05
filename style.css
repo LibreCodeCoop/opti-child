@@ -294,18 +294,18 @@ p,
 }
 
 #ensp-fiocruz{
-    height: 35px;
+    height: 45px;
     border-bottom: 5px solid #a6d54c;
 }
 
 #logoENSP{
     float: left;
-    width: 200px;
+    width: 250px;
     padding: 10px;
 }
 
 #logoFiocruz{
     float: right;
-    width: 80px;
+    width: 100px;
     padding: 10px;
 }
