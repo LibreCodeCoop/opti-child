@@ -161,13 +161,19 @@ input.searchfield{
     color: var(--second) !important;
 }
 
-.wpglobus-selector-box img{
-    display: none;
+.widget_wpglobus .list{
+    float: right;
+    margin-top: 10px;
 }
 
-.wpglobus-selector-box{
-    padding: 20px !important;
-    float: right !important;
+.widget_wpglobus .list a{
+    float: left;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.widget_wpglobus .list .code{
+    display: none !important;
 }
 
 .eightcol .fourcol{
@@ -259,4 +265,28 @@ p,
     #masthead .custom-logo-link{
         width: 100%;
     }
+}
+
+#masthead .widget{
+    margin: unset !important;
+    padding: unset !important;
+}
+
+#masthead .fourcol{
+    text-align: right;
+}
+
+#masthead #custom_html-4 .textwidget{
+    margin-top: 50px !important;
+}
+
+#masthead #custom_html-4 .custom-html-widget a{
+    padding: 8px;
+}
+
+#masthead .fourcol .textwidget p{
+    color: var(--second) !important;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 15px 0px 0px 0px;
 }
