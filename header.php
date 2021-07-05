@@ -27,21 +27,15 @@
 				<?php do_action( 'before' ); ?>
 
 				<section class="row">
-					<?php the_custom_logo(); ?>
-					<div class="wpglobus-selector-box">
-						<?php wp_globus(); ?>
+					<div class="eightcol">
+						<?php the_custom_logo(); ?>
 					</div>
-						<hgroup id="branding">
-							<h1 id="logo" class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Home', 'opti' ); ?>"><?php bloginfo( 'name' ); ?></a>
-							</h1>
-							<?php if ( get_bloginfo( 'description' ) ) { ?>
-							<h2 id="description" class="site-description">
-								<?php bloginfo( 'description' ); ?>
-							</h2>
-							<?php } ?>
-						</hgroup>
-					<?php opti_custom_header( 'header' );?>
+					<div class="fourcol">
+						<?php
+						if ( is_active_sidebar( 'sidebar-6' ) ) {
+							dynamic_sidebar( 'sidebar-6' );
+						}?>
+					</div>
 				</section>
 
 				<nav class="menu" id="nav-primary">

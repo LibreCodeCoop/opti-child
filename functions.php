@@ -115,5 +115,11 @@ function opti_child_widgets_init() {
 			'after_title' => '</h4>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name' => esc_html__( 'Header Right Widgets', 'opti-child' ),
+			'id' => 'sidebar-6',
+		)
+	);
 }
 add_action( 'widgets_init', 'opti_child_widgets_init',0 );
