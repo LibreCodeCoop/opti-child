@@ -25,6 +25,15 @@ nav, .postmetadata, .wp-caption{
 	font-family: "Open Sans", sans-serif;
 }
 
+.site-title, h1, h2, h3, h4, h5, h6{
+    color: var(--link);
+    font-weight: bold !important;
+}
+
+h1.pagetitle{
+    border-bottom: 1px solid var(--second);
+}
+
 h3{
     font-size: 20px !important;
 }
@@ -308,4 +317,55 @@ p,
     float: right;
     width: 100px;
     padding: 10px;
+}
+
+.wp-block-group{
+    border-bottom: 1px dotted #B0B0B0;
+}
+
+.wp-block-group__inner-container{
+    margin-bottom: 10px;
+}
+
+.active{
+    color: var(--second) !important;
+}
+
+#post-5 .wp-block-latest-posts__list:first-child li:not(#post-5 .wp-block-latest-posts__list:first-child li:first-child){
+    border-left: 2px solid var(--link);
+}
+
+#post-5 .wp-block-latest-posts__list:first-child li{
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+#post-5 .wp-block-group__inner-container p, #post-5 .wp-block-group__inner-container ul{
+    display: none;
+}
+
+#post-5 .wp-block-group__inner-container h3{
+    cursor: pointer;
+    user-select: none;
+}
+
+#post-5 .wp-block-latest-posts__list li{
+    list-style: none;
+}
+
+#post-5 .wp-block-latest-posts__list:first-child li{
+    display: inline;
+    cursor: pointer;
+}
+
+#post-5 .wp-block-latest-posts__list:nth-child(2) li:not(#post-5 .wp-block-latest-posts__list li:first-child){
+    display: none;
+}
+
+#post-5 .wp-block-latest-posts__list:nth-child(2) li a:first-child{
+    display: none;
+}
+
+#post-5 .entry > *{
+    margin-top: unset;
 }
