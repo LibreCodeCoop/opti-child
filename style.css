@@ -319,7 +319,7 @@ p,
     padding: 10px;
 }
 
-.wp-block-group{
+.wp-block-group, #post-989 .wp-block-latest-posts__list li{
     border-bottom: 1px dotted #B0B0B0;
 }
 
@@ -327,10 +327,7 @@ p,
     margin-bottom: 10px;
 }
 
-.active{
-    color: var(--second) !important;
-}
-
+/* Página Apresentação*/
 #post-5 .wp-block-latest-posts__list:first-child li:not(#post-5 .wp-block-latest-posts__list:first-child li:first-child){
     border-left: 2px solid var(--link);
 }
@@ -340,11 +337,11 @@ p,
     margin: 0px;
 }
 
-#post-5 .wp-block-group__inner-container p, #post-5 .wp-block-group__inner-container ul{
+#post-5 .wp-block-group__inner-container > *:not(#post-5 .wp-block-group__inner-container h3), #post-989 .wp-block-latest-posts__list li > *:not(#post-989 .wp-block-latest-posts__list li a)  {
     display: none;
 }
 
-#post-5 .wp-block-group__inner-container h3{
+#post-5 .wp-block-group__inner-container h3, #post-989 .wp-block-latest-posts__list li a{
     cursor: pointer;
     user-select: none;
 }
@@ -358,14 +355,26 @@ p,
     cursor: pointer;
 }
 
-#post-5 .wp-block-latest-posts__list:nth-child(2) li:not(#post-5 .wp-block-latest-posts__list li:first-child){
+#post-5 .wp-block-latest-posts__list:nth-child(2) > li:not(#post-5 .wp-block-latest-posts__list:nth-child(2) > li:first-child){
     display: none;
 }
 
-#post-5 .wp-block-latest-posts__list:nth-child(2) li a:first-child{
+#post-5 .wp-block-latest-posts__list:nth-child(2) > li a:first-child{
     display: none;
 }
 
-#post-5 .entry > *{
-    margin-top: unset;
+#post-5 .wp-block-latest-posts__list:first-child li:first-child a{
+    color: var(--second);
+}
+
+/* Página Docentes */
+#post-989 .wp-block-latest-posts__list li{
+    list-style: none;
+    margin: unset;
+    padding: 15px 0px 15px 0px;
+}
+
+#post-989 .wp-block-latest-posts__list li a{
+    color: var(--first);
+    font-weight: bold;
 }
