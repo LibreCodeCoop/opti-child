@@ -1,16 +1,10 @@
 // Insere foto após nome do professor em página Docentes. 
 // Remove link de nome de professores
 const featuredImage = document.querySelectorAll('#post-989 .wp-block-latest-posts__featured-image');
-const arrowSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path d="M13,15.405l8.764-8.584c0.392-0.383,1.019-0.38,1.406,0.008l1.536,1.536c0.391,0.391,0.39,1.026-0.002,1.417L13.707,20.707 C13.512,20.902,13.256,21,13,21c-0.256,0-0.512-0.098-0.707-0.293L1.296,9.782c-0.393-0.39-0.394-1.025-0.002-1.417L2.83,6.829 c0.387-0.387,1.015-0.391,1.406-0.008L13,15.405z"/></svg>';
 
 featuredImage.forEach((element) => {
-
   var postTitle = element.nextSibling;
-
   postTitle.removeAttribute("href");
-
-  postTitle.textContent += ' v';
-
   postTitle.parentNode.insertBefore(postTitle, element);
 });
 
